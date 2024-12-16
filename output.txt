@@ -1,0 +1,125 @@
+# Environment settings / overrides
+env_number: '01'
+environment_name: 'dev'
+environment_no: '01'
+env_name: 'dev'
+environment: "%{hiera('env_name')}%{hiera('env_number')}"
+
+#tor four_front_end module to livingsocial_frontend
+wow_four_front_end_frontend_package_ensure: '848'
+wow_four_front_end_secure_package_ensure: '678'
+wowcher_frontend_desktop_package_ensure: '79'
+
+# wowcher responsive
+wowcher_frontend_package_ensure: '1729'
+wowcher_secure_package_ensure: '1601'
+
+#Wowcher Copy DEVOPS-8128
+wow_fe_package_ensure: '1044'
+wow_secure_package_ensure: '1030'
+
+# v4 Back Ends
+wow_search_api_package_ensure: '1475'
+wow_content_services_package_ensure: '772'
+wow_action_consumer_package_ensure: '675'
+wow_public_api_package_ensure: '10_1583402944'
+wow_sailthru_email_consumer_package_ensure: '1.0.11-PRD-343-SNAPSHOT'
+recommendation_api_package_ensure: '202'
+sailthru_api_package_ensure: '100'
+
+# Payment and Refund
+payment_package_ensure: '837'
+refund_package_ensure: '65'
+payment_batch_package_ensure: '58'
+
+# Deal Creator and Salesforce
+deal_creator_package_ensure: 'deal-creator-1.0.1-SNAPSHOT'
+salesforce_api_package_ensure: '133'
+
+# Promo Codes and User Service
+promo_codes_package_ensure: '72'
+user_service_package_ensure: '150'
+
+# Order Delivery Status
+order_delivery_status_package_ensure: '418'
+discount_api_package_ensure: '72'
+basket_api_package_ensure: '224'
+order_api_package_ensure: '0.0.1-SNAPSHOT'
+basket_resource_package_ensure: '217'
+travel_api_package_ensure: '395'
+
+# Omniture Api
+omniture_api_package_ensure: '3'
+
+# Loyalty
+loyalty_build_version: '0.0.1-SNAPSHOT'
+code_creator_version: '8'
+
+####################################
+
+# Daily Deals versions
+dailydeals_major_version: '89.0.3'
+dailydeals_build_version:
+  account: '90.0.10-SNAPSHOT'
+  batch: '90.0.0-new-SNAPSHOT'
+  cache: '178'
+  dac: '15'
+  jms: '90.0.0-new-SNAPSHOT'
+  api: '90.0.0-2974-SNAPSHOT'
+  frontend: '90.0.0-new-SNAPSHOT'
+  merchant-area: '90.0.20'
+  payment-consumer: '90.0.0-new-SNAPSHOT'
+  rabbit: '178'
+  sailthru-api: '15'
+  sailthru-batch: '90.0.54-DEVOPS-13844-ami2-SNAPSHOT'
+  sailthru-consumer: '90.0.0-new-SNAPSHOT'
+  search: '113'
+  solr: '113'
+  wps: '90.0.0-2974-SNAPSHOT'
+
+# Marketplace Versions
+wow_marketplace_aws_version: '29'
+wow_marketplace_cat_version: '30'
+wow_marketplace_mer_version: '33'
+wow_marketplace_not_version: '34'
+wow_marketplace_sec_version: '27'
+wow_marketplace_sub_version: '42'
+
+marketplace_frontend_version: '27'
+marketplace_cms_version: '66'
+
+wow_festatic_service_ensure: running
+wow_festatic_service_enable: true
+
+###################################
+# App status for this environment
+
+# v4 Front Ends
+wow_four_front_end_service_ensure: running
+wow_four_front_end_service_enable: true
+wowcher_frontend_service_ensure: running
+wowcher_frontend_service_enable: true
+
+# v4 Back Ends
+wow_action_consumer_service_ensure: "running"
+wow_content_services_service_ensure: "running"
+wow_public_api_service_ensure: "running"
+wow_search_api_service_ensure: "running"
+
+# Payment and Refund
+payment_service_ensure: running
+refund_service_ensure: 'running'
+
+# Deal Creator and Salesforce
+deal_creator_service_ensure: running
+salesforce_api_service_ensure: running
+
+# Promo Codes and User Service
+promo_codes_service_ensure: running
+user_service_service_ensure: running
+
+wow_festatic_service_ensure: running
+wow_festatic_service_enable: true
+
+###################################
+# Daily Deals Oracle DB Connection
